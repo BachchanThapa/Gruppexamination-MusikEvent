@@ -52,18 +52,84 @@ html {
 .schema {
   background-color: black;
   color: white;
+  padding: 1rem;
 }
 
 .schema-kort {
   background-color: aqua;
   border: 1px solid black;
   padding: 1rem;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 .schema-article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: black;
-  padding: 1rem;
   gap: 1rem;
+}
+/*MAIN HIGHLIGHTS-FLEX LAYOUT*/
+.highlights {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.highlights-articles {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.highlights-kort {
+  width: 230px;
+}
+.highlights-kort img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+.footer a {
+  line-height: 2rem;
+  color: white;
+}
+/*MEDIA QUERIES*/
+@media (max-width: 600px) {
+  .navbar {
+    gap: 2rem;
+  }
+
+  .schema-article {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .highlights-kort {
+    width: 300px;
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .highlights-articles {
+    flex-direction: column;
+    width: 260px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text {
+    top: 30%;
+    left: 10%;
+  }
+
+  .hero-text p {
+    font-size: medium;
+  }
 }
