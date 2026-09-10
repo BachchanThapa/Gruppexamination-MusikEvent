@@ -7,7 +7,7 @@
 html {
   scroll-behavior: smooth;
 }
-.page-container {
+body {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -17,7 +17,8 @@ html {
   height: 400px;
 }
 
-.hero img {
+
+.hero-image-and-text img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -26,7 +27,7 @@ html {
 .hero-text {
   position: absolute;
   top: 10%;
-  left: 20%;
+  left: 30%;
   color: white;
   font-size: x-large;
   font-weight: bold;
@@ -51,38 +52,42 @@ html {
 /*MAIN SCHEMA-GRID LAYOUT*/
 .schema {
   background-color: black;
-  color: white;
   padding: 1rem;
-}
-
-.schema-kort {
-  background-color: aqua;
-  border: 1px solid black;
-  padding: 1rem;
-  /* gap: 1rem; */
-}
-.schema-article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: black;
   gap: 1rem;
+}
+
+.schema-kort {
+  background-color: aqua;
+  border: 4px solid white;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.schema h2{
+  grid-column: 1 / -1;
+  color: white;
 }
 /*MAIN HIGHLIGHTS-FLEX LAYOUT*/
 .highlights {
   background-color: black;
   color: white;
   padding: 1rem;
-}
-.highlights-articles {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.highlights h2 {
+  width: 100%;
+}
 
 .highlights-kort {
+  flex: 1;
   width: 230px;
 }
+
 .highlights-kort img {
   width: 100%;
   height: 150px;
@@ -107,20 +112,19 @@ h2 {
     gap: 2rem;
   }
 
-  .schema-article {
+  .schema {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
   .highlights-kort {
     width: 300px;
-    padding-left: 4rem;
     margin-bottom: 2rem;
   }
 
-  .highlights-articles {
+  .highlights {
     flex-direction: column;
-    width: 260px;
+  
     justify-content: center;
     align-items: center;
   }
