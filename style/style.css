@@ -12,12 +12,17 @@ body {
   margin: 0 auto;
 }
 
-/*===HEADER SECTION===*/
+/*============================= HEADER SECTION ============================================*/
 .hero-image-and-text {
   height: 400px;
+  position: relative;
+  /* position: relative added so .hero-text
+     is positioned relative to this container */
 }
 
-
+h1 {
+  color: red;
+}
 .hero-image-and-text img {
   width: 100%;
   height: 100%;
@@ -27,21 +32,60 @@ body {
 .hero-text {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 10%;
   color: white;
   font-size: x-large;
   font-weight: bold;
 }
+/*============Adding a buy btn==================*/
 
-/*===NAV SECTION===*/
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+
+  animation: button-pulse 1.5s infinite;
+}
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.8); /*Small visible red shadow */
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 0, 0, 0); /*Shadow expands and fades*/
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); /*Shadow disappears*/
+    /*Then repeats again in button-pulse 1.5ms infinite as given above*/
+  }
+}
+.button:hover {
+  background-color: darkred;
+  /*   animation-play-state: paused; (ON/OFF- Delete this part)
+ */
+}
+
+/*==================================== NAV SECTION ========================================*/
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6rem;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 0; /*We give paddind above only NOT bottom, can skip this line as well*/
   background-color: black;
   flex-wrap: wrap;
+
+  /*===== Making a Nav bar sticky=====*/
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .navbar a {
@@ -49,13 +93,20 @@ body {
   color: white;
   font-size: large;
 }
-/*MAIN SCHEMA-GRID LAYOUT*/
+/*===== Making a Nav bar hovereffect=====*/
+.navbar a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/*==================================== MAIN SCHEMA-GRID LAYOUT ==========================*/
 .schema {
   background-color: black;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  color: black;
+  /*   color: black;  There is no point having this, backgound color black and color black makes no sense
+ */
   gap: 1rem;
 }
 
@@ -63,13 +114,14 @@ body {
   background-color: aqua;
   border: 4px solid white;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
 }
-.schema h2{
+.schema h2 {
+  margin-top: -1rem; /*Reducing more black bacground color space height*/
   grid-column: 1 / -1;
   color: white;
 }
-/*MAIN HIGHLIGHTS-FLEX LAYOUT*/
+/*========================= MAIN HIGHLIGHTS-FLEX LAYOUT ====================================*/
 .highlights {
   background-color: black;
   color: white;
@@ -93,9 +145,20 @@ body {
   height: 150px;
   object-fit: cover;
 }
-h2 {
-  margin-bottom: 1rem;
+/* h2 {
+  margin-bottom: 0rem;
+} */
+/* Now both schema h2 and highlights h2 are the part of it's parent and both hold the 1 rem padding*/
+
+/*========== Read more / les mer... part ===============*/
+.highlights-kort a {
+  display: block;
+  text-align: right;
+  color: white;
+  text-decoration: none;
 }
+/*========================= FOOTER SECTION ====================================*/
+
 .footer {
   text-align: center;
   padding: 2rem;
@@ -106,7 +169,7 @@ h2 {
   line-height: 2rem;
   color: white;
 }
-/*MEDIA QUERIES*/
+/*=============================== MEDIA QUERIES- RESPONSIVENESS, iPhone 14 ===============*/
 @media (max-width: 600px) {
   .navbar {
     gap: 2rem;
@@ -124,7 +187,7 @@ h2 {
 
   .highlights {
     flex-direction: column;
-  
+
     justify-content: center;
     align-items: center;
   }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
 
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,119 +13,127 @@
 <body>
 
 
-    <!--HEADER SECTION-->
-    <header id="hero">
-      <section class="hero-image-and-text">
+  <!--HEADER SECTION-->
+  <header class="hero-image-and-text" id="hero">
+    <!--     <section class="hero-image-and-text">
+ --> <!--As we have only one section inside header we can give this class name to header-->
+    <img src="./assets/hero.jpg" alt="Publik på en musikfestival">
+    <div class="hero-text">
+      <!-- I canged article to div as- A div could be used instead of article because
+            this hero text is not independent article content. -->
+      <h1>Festival 2026</h1>
+      <p>
+        10-12 september 2026
+      </p>
+      <p>
+        Göteborg
+      </p>
+      <p>
+        Årets största musikfestival mitt i Göteborg!
+      </p>
+      <a href="#" class="button">Köp biljet</a>
+    </div>
+    <!--     </section>
+ -->
+  </header>
 
-        <img src="./assets/hero.jpg" alt="hero-image">
-        <article class="hero-text">
-          <h1>Festival 2026</h1>
-          <p>
-            10-12 september 2026
-          </p>
-          <p>
-            Göteborg
-          </p>
-          <p>
-            Årets största musikfestival mitt i Göteborg!
-          </p>
-        </article>
-      </section>
-    </header>
+  <!--NAV SECTION-->
+  <nav class="navbar">
+    <a href="#schema">Schema</a>
+    <a href="#highlights">Höjdpunkter</a>
+    <a href="#footer">Kontakt</a>
+  </nav>
 
-    <!--NAV SECTION-->
-    <nav class="navbar">
-      <a href="#schema">Schema</a>
-      <a href="#highlights">Höjdpunkter</a>
-      <a href="#footer">Kontakt</a>
-    </nav>
+  <main>
 
-    <main>
+    <!--MAIN SCHEMA-GRID LAYOUT-->
 
-      <!--MAIN SCHEMA-GRID LAYOUT-->
+    <section class="schema" id="schema">
+      <h2>Schema</h2>
 
-      <section class="schema" id="schema">
-        <h2>Schema</h2>
+      <article class="schema-kort">
+        <p>Tid: 14:00</p>
+        <p>Band: Crazy Boy </p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 14:00</p>
-            <p>Band: Crazy Boy </p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 15:30</p>
+        <p>Band: Broken Halo</p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 15:30</p>
-            <p>Band: Broken Halo</p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 17:00</p>
+        <p>Band: Ghost Parade</p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 17:00</p>
-            <p>Band: Ghost Parade</p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 18:30</p>
+        <p>Band: No Signal</p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 18:30</p>
-            <p>Band: No Signal</p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 20:00</p>
+        <p>Band: Two Lefties </p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 20:00</p>
-            <p>Band: Two Lefties </p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 21:30</p>
+        <p>Band: The Goofs</p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 21:30</p>
-            <p>Band: The Goofs</p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 23:00</p>
+        <p>Band: The Ducklings</p>
+      </article>
 
-          <article class="schema-kort">
-            <p>Tid: 23:00</p>
-            <p>Band: The Ducklings</p>
-          </article>
+      <article class="schema-kort">
+        <p>Tid: 00:30</p>
+        <p>Band: Low Battery</p>
+      </article>
+    </section>
 
-          <article class="schema-kort">
-            <p>Tid: 00:30</p>
-            <p>Band: Low Battery</p>
-          </article>
-      </section>
+    <!--MAIN HIGHLIGHTS -FLEX LAYOUT-->
 
-      <!--MAIN HIGHLIGHTS -FLEX LAYOUT-->
+    <section class="highlights" id="highlights">
+      <h2>Höjdpunkter</h2>
 
-      <section class="highlights" id="highlights">
-        <h2>Höjdpunkter</h2>
+      <article class="highlights-kort">
+        <img src="./assets/Highlight-colorsmoke.jpg" alt="Färgad rök över festivalområde">
+        <h3>Färgad rök</h3>
+        <p>Rökmakiner vid scen 1</p>
+        <a href="#">läs mer...</a>
+      </article>
 
-          <article class="highlights-kort">
-            <img src="./assets/Highlight-colorsmoke.jpg" alt="colorsmoke">
-            <h3>Färgad rök</h3>
-            <p>Rökmakiner vid scen 1</p>
-          </article>
+      <article class="highlights-kort">
+        <img src="./assets/highlight-foodtruck.jpg" alt="En food truck på festivalen">
+        <h3>Food truck</h3>
+        <p>Hamburgare, korv</p>
+        <a href="#">läs mer...</a>
+      </article>
 
-          <article class="highlights-kort">
-            <img src="./assets/highlight-foodtruck.jpg" alt="foodtruck">
-            <h3>Food truck</h3>
-            <p>Hamburgare, korv</p>
-          </article>
+      <article class="highlights-kort">
+        <img src="./assets/highlight-dj.jpg" alt="DJ som spelar musik i ett tält">
+        <h3>DJ tält</h3>
+        <p>froggyboy varje kväll efter kl. 22</p>
+        <a href="#">läs mer...</a>
+      </article>
 
-          <article class="highlights-kort">
-            <img src="./assets/highlight-dj.jpg" alt="dj">
-            <h3>DJ tält</h3>
-            <p>froggyboy varje kväll efter 22</p>
-          </article>
+      <article class="highlights-kort">
+        <img src="./assets/highlight-lightshow.jpg" alt="Ljusshow framför festivalscenen">
+        <h3>Ljusshow</h3>
+        <p>Ljusshow vid varje scen</p>
+        <a href="#">läs mer...</a>
+      </article>
 
-          <article class="highlights-kort">
-            <img src="./assets/highlight-lightshow.jpg" alt="lightshow">
-            <h3>Ljusshow</h3>
-            <p>Ljusshow vid varje scen</p>
-          </article>
+    </section>
+  </main>
 
-      </section>
-    </main>
-
-    <!--FOOTER SECTION-->
-    <footer class="footer" id="footer">
-      <p>Email: info@sommarfestivalen.com</p>
-      <p>Sponsorer: Musikgruppen AB</p>
-      <a href="#hero">Till toppen ↑</a>
-    </footer>
+  <!--FOOTER SECTION-->
+  <footer class="footer" id="footer">
+    <p>Email: info@sommarfestivalen.com</p>
+    <p>Sponsorer: Musikgruppen AB</p>
+    <a href="#hero">Till toppen ↑</a>
+  </footer>
 
 
 </body>
